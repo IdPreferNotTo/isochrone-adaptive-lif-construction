@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lukas/CLionProjects/PhD/alif_deterministic_isochrone/main.cpp
+iostream
+-
+fstream
+-
+iomanip
+-
+random
+-
+unistd.h
+-
+pwd.h
+-
+cmath
+-
+boost/property_tree/ptree.hpp
+-
+
