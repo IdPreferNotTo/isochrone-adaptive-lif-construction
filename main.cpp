@@ -84,7 +84,7 @@ public:
         _v += (_mu  - _v - _a) * _dt;
         _a += (-_a/_taua) * _dt;
         if (_v > 1.0){
-            _v -= 1;
+            _v = 0;
             _a += _deltaa;
             return true;
         }
@@ -489,7 +489,8 @@ int main() {
     double T = alif.period();
     vector<vector<double>> limit_cycle = alif.get_limit_cycle();
     double phase = 2.*pi/2.;
-    int idx_phase = static_cast<int>(limit_cycle.size()*(phase/(2*pi)));
+    int idx_phase = static_cast<int>(limit_cycle.size()*(phase/(2*pi))) - 1.;
+    cout << limit_cycle.size() << endl;
     vector<double> p = limit_cycle[idx_phase];
     double v_lc = p[0];
     double a_lc = p[1];
@@ -499,7 +500,7 @@ int main() {
     Bob_the_isochrone_builder iso(alif, T, v_lc, a_lc, step_width);
     double vres = 0;
     double vmax = 1;
-    double vmin = -5;
+    double vmin = -10;
 
     // Construct central branch (that passes the limit cycle)
     vector<vector<double>> iso_left_b1 = iso.construct_isochrone_branch_left_from_point(v_lc, a_lc, vres, -0.01, 0);
@@ -530,8 +531,7 @@ int main() {
 
 
     // Expand lower branches from vR to -5.
-    for(int i = 0; i < branches.size(); i++) {
-        vector<vector<double>> current_branch = branches[i];
+    for(auto current_branch : branches) {
         p = current_branch[0];
         v0 = p[0];
         a0 = p[1];
