@@ -1,3 +1,3 @@
-/home/lukas/CLionProjects/PhD/alif_deterministic_isochrone/cmake-build-release/CMakeFiles/edit_cache.dir
-/home/lukas/CLionProjects/PhD/alif_deterministic_isochrone/cmake-build-release/CMakeFiles/rebuild_cache.dir
-/home/lukas/CLionProjects/PhD/alif_deterministic_isochrone/cmake-build-release/CMakeFiles/alif_deterministic_isochrone.dir
+/home/lukas/CLionProjects/PhD/isochrone/Isochrone-adaptive-lif-construction/cmake-build-release/CMakeFiles/Isochrone-adaptive-lif-construction.dir
+/home/lukas/CLionProjects/PhD/isochrone/Isochrone-adaptive-lif-construction/cmake-build-release/CMakeFiles/edit_cache.dir
+/home/lukas/CLionProjects/PhD/isochrone/Isochrone-adaptive-lif-construction/cmake-build-release/CMakeFiles/rebuild_cache.dir
